@@ -14,10 +14,8 @@ from pathlib import Path
 
 import environ
 env = environ.Env(
-    # set casting, default value
     DEBUG=(bool, False)
 )
-# reading .env file
 environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,6 +37,9 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    #Own apps
+    'quiz',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
